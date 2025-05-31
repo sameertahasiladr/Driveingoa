@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Car Details - Self Drive Cars in Goa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
+        <div class="container">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                        <a href="tel:+01234567890" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                        <a href="mailto:Driveingoa@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Driveingoa@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i>Driveingoa</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="cars.html" class="nav-item nav-link active">Cars</a>
+                        <a href="luxury-car.html" class="nav-item nav-link">Luxury Car</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="tel:+01234567890" class="btn btn-primary rounded-pill py-2 px-4">Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Car Details Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 id="car-title" class="display-5 mb-4">Rent <span class="text-primary">Car Model</span> in Goa</h1>
+                    <div class="mb-4">
+                        <h3 id="gallery-title">Car Model Image Gallery</h3>
+                        <div id="car-gallery" class="row g-3">
+                            <div class="col-12">
+                                <img id="car-image" src="img/car-1.png" class="img-fluid w-100" alt="Car Model">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="car-model" class="mb-3">Car Model</h3>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <p><strong>Engine:</strong> <span id="engine">N/A</span></p>
+                            <p><strong>Transmission:</strong> <span id="transmission">N/A</span></p>
+                            <p><strong>Drive:</strong> <span id="drive">N/A</span></p>
+                            <p><strong>Fuel Type:</strong> <span id="fuel">N/A</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Price:</strong> <span id="price">N/A</span>/day</p>
+                            <p><strong>Year:</strong> <span id="year">N/A</span></p>
+                            <p><strong>Mileage:</strong> <span id="mileage">N/A</span></p>
+                            <p><strong>Seating Capacity:</strong> <span id="seats">N/A</span></p>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">Rental Terms</h3>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <p><strong>Advance Payment:</strong> Pay booking amount only</p>
+                            <p><strong>Maximum Kms per Day:</strong> Unlimited</p>
+                            <p><strong>Additional Distance Fee:</strong> 0/-</p>
+                            <p><strong>Additional Usage Fee:</strong> 0/-</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Minimum Driver Age:</strong> 20 years old</p>
+                            <p><strong>Minimum Required Driving Experience:</strong> 1 year</p>
+                            <p><strong>Minimum Rental Period:</strong> 2 days</p>
+                        </div>
+                    </div>
+                    <h3 class="mb-3">Features</h3>
+                    <ul id="features" class="list-unstyled">
+                        <li><i class="fa fa-check text-primary me-2"></i>USB adapter</li>
+                        <li><i class="fa fa-check text-primary me-2"></i>Sound system</li>
+                        <li><i class="fa fa-check text-primary me-2"></i>Bluetooth</li>
+                        <li><i class="fa fa-check text-primary me-2"></i>ABS</li>
+                        <li><i class="fa fa-check text-primary me-2"></i>Parking sensors</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Book This Car</h5>
+                            <p class="card-text">Contact us to book this car now!</p>
+                            <a href="tel:+01234567890" class="btn btn-primary rounded-pill py-2 px-4 mb-2 w-100">Call Now</a>
+                            <a href="https://wa.me/+01234567890" class="btn btn-success rounded-pill py-2 px-4 w-100">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Car Details End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">About Driveingoa</h4>
+                        <p class="mb-3">We are committed to providing top-quality self-drive car rentals in Goa with excellent customer service.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> 123 Street, Old Goa, India</a>
+                        <a href="mailto:Driveingoa@gmail.com"><i class="fas fa-envelope me-2"></i> Driveingoa@gmail.com</a>
+                        <a href="tel:+01234567890"><i class="fas fa-phone me-2"></i> +01234567890</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Driveingoa</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Car Details Script -->
+    <script>
+        // Car data
+        const cars = [
+            {
+                id: 'maruti-swift',
+                name: 'Maruti Swift',
+                image: 'img/car-1.png',
+                price: '2500',
+                engine: '1197 cc',
+                transmission: 'Manual',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2020',
+                mileage: '15K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+                id: 'hyundai-creta',
+                name: 'Hyundai Creta',
+                image: 'img/car-2.png',
+                price: '4000',
+                engine: '1497 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2021',
+                mileage: '12K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors', 'Sunroof']
+            },
+            {
+                id: 'honda-city',
+                name: 'Honda City',
+                image: 'img/car-3.png',
+                price: '3200',
+                engine: '1498 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2019',
+                mileage: '20K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+                id: 'tata-nexon',
+                name: 'Tata Nexon',
+                image: 'img/car-4.png',
+                price: '3600',
+                engine: '1199 cc',
+                transmission: 'Manual',
+                drive: 'Front',
+                fuel: 'Petrol/Diesel',
+                year: '2020',
+                mileage: '18K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors']
+            },
+            {
+                id: 'mahindra-thar',
+                name: 'Mahindra Thar Manual Hard Top (New Model)',
+                image: 'img/car-5.png',
+                price: '5000',
+                engine: '1170 cc',
+                transmission: 'Manual',
+                drive: 'Front',
+                fuel: 'Diesel',
+                year: '2021',
+                mileage: '10K',
+                seats: '4',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors']
+            },
+            {
+                id: 'toyota-fortuner',
+                name: 'Toyota Fortuner',
+                image: 'img/car-6.png',
+                price: '6000',
+                engine: '2755 cc',
+                transmission: 'Automatic',
+                drive: 'Rear',
+                fuel: 'Diesel',
+                year: '2020',
+                mileage: '15K',
+                seats: '7',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors', 'Leather seats']
+            },
+            {
+                id: 'jeep-compass',
+                name: 'Jeep Compass',
+                image: 'img/car-7.png',
+                price: '4200',
+                engine: '1956 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Diesel',
+                year: '2021',
+                mileage: '8K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors', 'Sunroof']
+            },
+            {
+                id: 'volkswagen-virtus',
+                name: 'Volkswagen Virtus',
+                image: 'img/car-8.png',
+                price: '3400',
+                engine: '999 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2022',
+                mileage: '5K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+                id: 'skoda-slavia',
+                name: 'Skoda Slavia',
+                image: 'img/car-9.png',
+                price: '3300',
+                engine: '999 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2022',
+                mileage: '6K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+                id: 'hyundai-verna',
+                name: 'Hyundai Verna',
+                image: 'img/car-10.png',
+                price: '3200',
+                engine: '1497 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2020',
+                mileage: '12K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors']
+            },
+            {
+                id: 'kia-seltos',
+                name: 'Kia Seltos',
+                image: 'img/car-11.png',
+                price: '4100',
+                engine: '1497 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2021',
+                mileage: '9K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors', 'Sunroof']
+            },
+            {
+                id: 'mg-hector',
+                name: 'MG Hector',
+                image: 'img/car-12.png',
+                price: '4500',
+                engine: '1451 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2020',
+                mileage: '10K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Parking sensors', 'Panoramic sunroof']
+            },
+            {
+                id: 'tata-altroz',
+                name: 'Tata Altroz',
+                image: 'img/car-13.png',
+                price: '2600',
+                engine: '1199 cc',
+                transmission: 'Manual',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2021',
+                mileage: '7K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+                id: 'maruti-baleno',
+                name: 'Maruti Baleno',
+                image: 'img/car-14.png',
+                price: '2700',
+                engine: '1197 cc',
+                transmission: 'Automatic',
+                drive: 'Front',
+                fuel: 'Petrol',
+                year: '2020',
+                mileage: '8K',
+                seats: '5',
+                features: ['USB adapter', 'Sound system', 'Bluetooth', 'ABS', 'Airbags']
+            },
+            {
+        id: 'bmw-3-series',
+        name: 'BMW 3 Series',
+        image: 'img/car-15.png',
+        price: '₹7000/day',
+        rating: 4.8,
+        type: 'Sedan',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        year: 2023,
+        mileage: '3K km',
+        engine: '2.0L Turbo Petrol',
+        power: '255 hp',
+        features: ['Leather Seats', 'Sunroof', 'Adaptive Cruise Control', 'Premium Audio', 'Navigation System'],
+        description: 'The BMW 3 Series offers a perfect blend of performance and luxury, with a sporty design and advanced technology for an exhilarating drive.'
+    },
+    {
+        id: 'mercedes-glc',
+        name: 'Mercedes-Benz GLC',
+        image: 'img/car-16.png',
+        price: '₹7500/day',
+        rating: 4.7,
+        type: 'SUV',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        year: 2022,
+        mileage: '4K km',
+        engine: '2.0L Turbo Petrol',
+        power: '241 hp',
+        features: ['Panoramic Sunroof', 'Heated Seats', '360° Camera', 'MBUX Infotainment', 'Keyless Entry'],
+        description: 'The Mercedes-Benz GLC combines elegance with versatility, offering a plush interior and smooth handling for a premium SUV experience.'
+    },
+    {
+        id: 'audi-q5',
+        name: 'Audi Q5',
+        image: 'img/car-17.png',
+        price: '₹7200/day',
+        rating: 4.6,
+        type: 'SUV',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        year: 2022,
+        mileage: '5K km',
+        engine: '2.0L TFSI Petrol',
+        power: '248 hp',
+        features: ['Virtual Cockpit', 'Bang & Olufsen Audio', 'Quattro AWD', 'Lane Assist', 'Power Tailgate'],
+        description: 'The Audi Q5 delivers sophisticated style and all-wheel-drive performance, ideal for exploring Goa in comfort and confidence.'
+    },
+    {
+        id: 'porsche-macan',
+        name: 'Porsche Macan',
+        image: 'img/car-18.png',
+        price: '₹9000/day',
+        rating: 4.9,
+        type: 'SUV',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        year: 2023,
+        mileage: '2K km',
+        engine: '2.0L Turbo Petrol',
+        power: '261 hp',
+        features: ['Sport Chrono Package', 'BOSE Surround Sound', 'Adaptive Air Suspension', 'Porsche Connect', '20-inch Alloys'],
+        description: 'The Porsche Macan offers thrilling performance and luxurious comfort, making every drive in Goa an unforgettable experience.'
+    },
+    {
+        id: 'jaguar-f-pace',
+        name: 'Jaguar F-Pace',
+        image: 'img/car-19.png',
+        price: '₹8000/day',
+        rating: 4.7,
+        type: 'SUV',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Petrol',
+        year: 2022,
+        mileage: '3K km',
+        engine: '2.0L Turbo Petrol',
+        power: '246 hp',
+        features: ['Meridian Audio', 'Interactive Driver Display', 'Adaptive Dynamics', 'Keyless Entry', 'Power Gesture Tailgate'],
+        description: 'The Jaguar F-Pace blends stunning design with dynamic performance, perfect for those seeking luxury and agility.'
+    },
+    {
+        id: 'lexus-es',
+        name: 'Lexus ES',
+        image: 'img/car-20.png',
+        price: '₹6800/day',
+        rating: 4.6,
+        type: 'Sedan',
+        seats: 5,
+        transmission: 'Automatic',
+        fuel: 'Hybrid',
+        year: 2023,
+        mileage: '4K km',
+        engine: '2.5L Hybrid',
+        power: '215 hp',
+        features: ['Mark Levinson Audio', 'Heated/Ventilated Seats', 'Lexus Safety System+', 'Panoramic View Monitor', 'Ambient Lighting'],
+        description: 'The Lexus ES offers serene comfort and hybrid efficiency, ideal for a refined and eco-conscious drive in Goa.'
+    }
+        ];
+
+        // Get car ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get('id');
+        const car = cars.find(c => c.id === carId);
+
+        if (car) {
+            // Update page content
+            document.getElementById('car-title').innerHTML = `Rent <span class="text-primary">${car.name}</span> in Goa`;
+            document.getElementById('gallery-title').textContent = `${car.name} Image Gallery`;
+            document.getElementById('car-image').src = car.image;
+            document.getElementById('car-image').alt = car.name;
+            document.getElementById('car-model').textContent = car.name;
+            document.getElementById('engine').textContent = car.engine;
+            document.getElementById('transmission').textContent = car.transmission;
+            document.getElementById('drive').textContent = car.drive;
+            document.getElementById('fuel').textContent = car.fuel;
+            document.getElementById('price').textContent = `₹${car.price}`;
+            document.getElementById('year').textContent = car.year;
+            document.getElementById('mileage').textContent = car.mileage;
+            document.getElementById('seats').textContent = car.seats;
+
+            // Update features list
+            const featuresList = document.getElementById('features');
+            featuresList.innerHTML = car.features.map(feature => `<li><i class="fa fa-check text-primary me-2"></i>${feature}</li>`).join('');
+        } else {
+            // Handle case where car is not found
+            document.querySelector('.container').innerHTML = '<h3>Car not found</h3><p>Please select a valid car from our fleet.</p><a href="cars.html" class="btn btn-primary">View All Cars</a>';
+        }
+    </script>
+</body>
+</html>
